@@ -7,10 +7,13 @@ date:   2019-08-14 00:00:00 +7
 
 Có 2 thứ bạn nên tiết kiệm,
 đó là sức khỏe và lời hứa.
+
 Có 2 thứ bạn phải cho đi,
 đó là tri thức và lòng tốt.
+
 Có 2 thứ bạn phải thay đổi,
 đó là bản thân và nhận thức.
+
 Có 2 thứ bạn phải giữ gìn,
 đó là niềm tin và nhân cách.
 Có 2 thứ bạn phải trân trọng,
