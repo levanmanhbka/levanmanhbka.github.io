@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Chi co hai thu thoi"
-date:   2019-08-14 00:00:00 +7
+date:   2019-08-14 00:00:00 +0530
 ---
+
 Có 2 thứ bạn nên tiết kiệm,
 đó là sức khỏe và lời hứa.
 
