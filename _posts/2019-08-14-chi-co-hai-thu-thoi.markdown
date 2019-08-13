@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hello, Jekyll"
+title:  "Chi co hai thu thoi"
 date:   2019-08-14 00:00:00 +7
 ---
 ##Chỉ có 2 thứ thôi
