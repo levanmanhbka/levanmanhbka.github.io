@@ -3,9 +3,6 @@ layout: post
 title:  "Design Pattern - Oberver"
 date:   2019-08-14 21:03:36 +0530
 ---
-
-# Design Pattern Oberver
-
 ---
 ## 1. Vấn đề (Problem):
 
