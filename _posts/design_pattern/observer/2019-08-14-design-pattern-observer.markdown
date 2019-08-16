@@ -3,8 +3,6 @@ layout: post
 title:  "Design Pattern - Oberver"
 date:   2019-08-14 21:03:36 +0530
 ---
-
-## Giới thiệu (Introduction):
 Observer Pattern dịnh nghĩa sự phụ thuộc một-nhiều giữa các đối tượng sao cho khi một đối tượng thay đổi trạng thái thì tất cả các đối tượng phụ thuộc nó cũng thay đổi theo. Tần suất sử dụng cao  
 
 ## 1. Vấn đề (Problem):
