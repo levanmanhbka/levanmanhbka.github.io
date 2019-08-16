@@ -12,7 +12,9 @@ div.highlighter-rouge {
 }
 
 div.highlight {
-	padding: 30px 150px;
+	//padding: 30px 150px;
+	margin: 0 150px;
+    max-width: 720px;
 }
 
 pre.highlight, code {
