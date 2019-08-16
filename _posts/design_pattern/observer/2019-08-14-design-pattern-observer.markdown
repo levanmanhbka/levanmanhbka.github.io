@@ -21,7 +21,110 @@ Mỗi khách hàng có lựa chọn đăng kí nhận thông báo mỗi khi có 
 ![observer-class-diagram!](/assets/images/design_pattern/observer-class-diagram.png)
 
 ### 2.3. Triển khai (implementation)
+MObserverable.java
+```java
+public interface MObserverable  {
+    public void updateNotification(String msg);
+    public String showInfo();
+}
+```
 
+MClient.java
+```java
+public class MClient implements MObserverable {
+    private String m_name;
+
+    public MClient(String name) {
+        this.m_name = name;
+    }
+
+    @Override
+    public void updateNotification(String msg) {
+        System.out.println(this.m_name + " recieve: " + msg);
+    }
+
+    @Override
+    public String showInfo() {
+        return m_name;
+    }
+}
+```
+
+MStore.java
+```java
+public class MStore {
+    private ArrayList<MObserverable> m_observables = null;
+    
+    public MStore(){
+        m_observables = new ArrayList<>();
+    }
+
+    public void subscribe(MObserverable observable)
+    {
+        m_observables.add(observable);
+        System.out.println(observable.showInfo() + " subscribe ++");
+    }
+
+    public void unsubscribe(MObserverable observable){
+        if(m_observables.contains(observable))
+        {
+            m_observables.remove(observable);
+            System.out.println(observable.showInfo() + " unsubscribe --");
+        }
+    }
+
+    public void notifyAllSubscriber(String msg){
+        System.out.println("Store notify all:" + msg);
+        for (MObserverable observer : m_observables) {
+            observer.updateNotification(msg);
+        }
+    }
+}
+```
+
+MainObserver.java
+```java
+public class MainObserver {
+
+    public static void main(String[] args) {
+       System.out.println("Observer Pattern Demo");
+       MStore store = new MStore();
+
+       MClient client1 = new MClient("Le Van Manh");
+       MClient client2 = new MClient("Nguyen Anh Tuan");
+       MClient client3 = new MClient("Nguyen Khac Khu");
+       MClient client4 = new MClient("Nguyen Thi Thao");
+
+       store.subscribe(client1);
+       store.notifyAllSubscriber("Have new model Galaxy A50");
+       store.subscribe(client2);
+       store.notifyAllSubscriber("Have new model Galaxy A60");
+       store.unsubscribe(client1);
+       store.subscribe(client3);
+       store.subscribe(client4);
+       store.notifyAllSubscriber("Have new model Galaxy A70");
+    }
+}
+```
+
+Kết quả chạy chương trình
+```yml
+Observer Pattern Demo
+Le Van Manh subscribe ++
+Store notify all:Have new model Galaxy A50
+Le Van Manh recieve: Have new model Galaxy A50
+Nguyen Anh Tuan subscribe ++
+Store notify all:Have new model Galaxy A60
+Le Van Manh recieve: Have new model Galaxy A60
+Nguyen Anh Tuan recieve: Have new model Galaxy A60
+Le Van Manh unsubscribe --
+Nguyen Khac Khu subscribe ++
+Nguyen Thi Thao subscribe ++
+Store notify all:Have new model Galaxy A70
+Nguyen Anh Tuan recieve: Have new model Galaxy A70
+Nguyen Khac Khu recieve: Have new model Galaxy A70
+Nguyen Thi Thao recieve: Have new model Galaxy A70
+```
 ---
 ## 3. Observer Pattern
 **Publisher(Store)**: Đối tượng thực hiện việc cung cấp thông tin theo yêu cầu. 
