@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chi co hai thu thoi"
+title:  "Chỉ có hai thứ thôi"
 date:   2019-08-14 00:00:00 +0530
 ---
 
