@@ -13,23 +13,20 @@ Hình ảnh: [refactoring.guru](https://refactoring.guru)
 ![observer-comic!](/assets/images/design_pattern/observer-comic.png)
 
 ---
-## 2. Giải quyết (Solution)
-### 2.1. Ý tưởng (Idea)
+## 2. Giải quyết (solution)
+### 2.1. Ý tưởng (idea)
 Mỗi khách hàng có lựa chọn đăng kí nhận thông báo mỗi khi có sản phẩm mới về cửa hàng hay là không
 
-### 2.2. Mô hình (Structure)
+### 2.2. Thiết kế (architecture)
+![observer-class-diagram!](/assets/images/design_pattern/observer-class-diagram.png)
 
+### 2.3. Triển khai (implementation)
+
+---
+## 3. Observer Pattern
 **Publisher(Store)**: Đối tượng thực hiện việc cung cấp thông tin theo yêu cầu. 
 **Oberver(Listener)**: Đối tượng tiếp nhận thông tin dưới góc nhìn của publisher, trong một vài trường hợp nó còn có tên là listener chuyên dùng để lắng nghe. Giống như việc bạn để lại thông tin cho cửa hàng chứ không phải để lại body ở đó.  
 **Subcriber(Person)**: Đối tượng nhận thông tin từ publisher.
-
----
-## 3. Áp dụng (Application)
-
-### 3.1. Thiết kế (Architecture)
-![observer-class-diagram!](/assets/images/design_pattern/observer-class-diagram.png)
-
-### 3.2. Triển khai (Implementation)
 
 ---
 ## Tài liệu tham khảo (reference):  
