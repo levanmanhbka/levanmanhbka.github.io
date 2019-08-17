@@ -2,13 +2,13 @@
 layout: post
 title:  "Design Pattern - Oberver"
 date:   2019-08-14 21:03:36 +0530
+tags: "design pattern observer software architecture java"
 ---
-Observer Pattern dịnh nghĩa sự phụ thuộc một-nhiều giữa các đối tượng sao cho khi một đối tượng thay đổi trạng thái thì tất cả các đối tượng phụ thuộc nó cũng thay đổi theo. Tần suất sử dụng cao  
+Observer Pattern dịnh nghĩa sự phụ thuộc một-nhiều giữa các đối tượng sao cho khi một đối tượng thay đổi trạng thái thì tất cả các đối tượng phụ thuộc nó cũng thay đổi theo, tần suất sử dụng cao. *"Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically."*
 
 ## 1. Vấn đề (Problem):
 
-Cách bản của bạn vài cây số có một cửa hàng (Store) bán đồ công nghệ. Sản phẩm mới về cửa hàng một ngày bất kì mà không có lịch cụ thể. Bạn không muốn thường xuyên tới (Store) và hỏi xem có sản phẩm mới nào không thay vào đó muốn nhận được thông báo mỗi khi có sản phẩm mới. Cửa hàng không thể gửi thông báo (Notification) tới mọi người trong bản của bạn vì sẽ làm phiền mọi người. Vậy cần có cơ chế để giải quyết vấn đề trên.
-
+Cách bản của bạn vài cây số có một cửa hàng (Store) bán đồ công nghệ. Sản phẩm mới về cửa hàng một ngày bất kì mà không có lịch cụ thể. Bạn không muốn thường xuyên tới (Store) và hỏi xem có sản phẩm mới nào không thay vào đó muốn nhận được thông báo mỗi khi có sản phẩm mới. Cửa hàng không thể gửi thông báo (Notification) tới mọi người trong bản của bạn vì sẽ làm phiền mọi người. Vậy cần có cơ chế để giải quyết vấn đề trên.   
 Hình ảnh: [refactoring.guru](https://refactoring.guru)
 ![observer-comic!](/assets/images/design_pattern/observer-comic.png)
 
@@ -127,10 +127,16 @@ Nguyen Thi Thao recieve: Have new model Galaxy A70
 ```
 ---
 ## 3. Observer Pattern
-**Publisher(Store)**: Đối tượng thực hiện việc cung cấp thông tin theo yêu cầu. 
+Các bạn học java rồi thì sẽ thấy nó chính là cơ chế listener trong java, ngoài ra chúng ta có thể tự liên hệ sang nhiều cái khác tùy vào khả năng tưởng tượng mỗi người. Dưới đây là một kiến trúc chung của observer pattern.   
+Hình ảnh [refactoring.guru](https://refactoring.guru)   
+![observer-class-diagram-theory!](/assets/images/design_pattern/observer-class-diagram-theory.png)
+
+**Publisher(Store)**: Đối tượng thực hiện việc cung cấp thông tin theo yêu cầu.   
 **Oberver(Listener)**: Đối tượng tiếp nhận thông tin dưới góc nhìn của publisher, trong một vài trường hợp nó còn có tên là listener chuyên dùng để lắng nghe. Giống như việc bạn để lại thông tin cho cửa hàng chứ không phải để lại body ở đó.  
 **Subcriber(Person)**: Đối tượng nhận thông tin từ publisher.
 
 ---
 ## Tài liệu tham khảo (reference):  
-[https://blog.duyet.net/2015/02/design-pattterns-he-thong-23-mau-design.html](https://blog.duyet.net/2015/02/design-pattterns-he-thong-23-mau-design.html)
+[http://www.uml.org.cn/c++/pdf/DesignPatterns.pdf](http://www.uml.org.cn/c++/pdf/DesignPatterns.pdf)   
+[https://refactoring.guru/design-patterns/observer](https://refactoring.guru/design-patterns/observer)   
+[https://blog.duyet.net/2015/02/design-pattterns-he-thong-23-mau-design.html](https://blog.duyet.net/2015/02/design-pattterns-he-thong-23-mau-design.html)   

@@ -92,8 +92,17 @@
     }
 }
 
+.texture-yellow {
+    background-image: url('{{ site.baseurl }}/assets/textures/yellow.jpg');
+
+    .post-date {
+        color: #ccc;
+    }
+}
+
 .texture-red,
-.texture-purple {
+.texture-purple,
+.texture-yellow {
     h2 {
         color: #ccc;
     }
