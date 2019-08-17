@@ -13,7 +13,7 @@ Hình ảnh: [refactoring.guru](https://refactoring.guru)
 ![observer-comic!](/assets/images/design_pattern/observer-comic.png)
 
 ---
-## 2. Giải quyết (solution)
+## 2. Giải quyết (solution):
 ### 2.1. Ý tưởng (idea)
 Mỗi khách hàng có lựa chọn đăng kí nhận thông báo mỗi khi có sản phẩm mới về cửa hàng hay là không
 
@@ -126,7 +126,7 @@ Nguyen Khac Khu recieve: Have new model Galaxy A70
 Nguyen Thi Thao recieve: Have new model Galaxy A70
 ```
 ---
-## 3. Observer Pattern
+## 3. Observer Pattern (structure):
 Các bạn học java rồi thì sẽ thấy nó chính là cơ chế listener trong java, ngoài ra chúng ta có thể tự liên hệ sang nhiều cái khác tùy vào khả năng tưởng tượng mỗi người. Dưới đây là một kiến trúc chung của observer pattern.   
 Hình ảnh [refactoring.guru](https://refactoring.guru)   
 ![observer-class-diagram-theory!](/assets/images/design_pattern/observer-class-diagram-theory.png)
