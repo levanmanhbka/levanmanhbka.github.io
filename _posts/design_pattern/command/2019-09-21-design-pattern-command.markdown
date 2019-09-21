@@ -11,7 +11,7 @@ tags: "design pattern commad software architecture java"
 ## 2. Giải quyết (Solution):
 ### 2.1 Ý tưởng (idea)
 ### 2.2 Thiết kế (architecture)
-
+![uml_implement_class_diagram!](/assets/images/design_pattern/command_pattern/uml_implement_class_diagram.png)
 ### 2.3 Triển khai (implementation)
 Command.jva
 ```java
