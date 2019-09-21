@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Design Pattern - Command"
-date:   2019-08-14 21:03:36 +0530
+date:   2019-09-21 21:03:36 +0530
 tags: "design pattern commad software architecture java"
 ---
 
@@ -11,6 +11,8 @@ tags: "design pattern commad software architecture java"
 ## 2. Giải quyết (Solution):
 ### 2.1 Ý tưởng (idea)
 ### 2.2 Thiết kế (architecture)
+
 ### 2.3 Triển khai (implementation)
+
 ## 3. Command Pattern (structure):
 ## Tài liệu tham khảo (reference):
