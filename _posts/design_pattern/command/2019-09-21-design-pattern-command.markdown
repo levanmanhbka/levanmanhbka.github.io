@@ -13,7 +13,7 @@ tags: "design pattern commad software architecture java"
 ### 2.2 Thiết kế (architecture)
 ![uml_implement_class_diagram!](/assets/images/design_pattern/command_pattern/uml_implement_class_diagram.png)
 ### 2.3 Triển khai (implementation)
-Command.jva
+Command.java
 ```java
 public interface Command {
 
