@@ -13,6 +13,95 @@ tags: "design pattern commad software architecture java"
 ### 2.2 Thiết kế (architecture)
 
 ### 2.3 Triển khai (implementation)
+Command.jva
+```java
+public interface Command {
 
+    public abstract void excute();
+}
+```
+
+Light.java
+```java
+public class Light {
+
+    public void turnOn(){
+        System.out.println("Light Turn On.");
+    }
+
+    public void turnOff(){
+        System.out.println("Light Turn Off.");
+    }
+}
+```
+
+TurnOnCommand.java
+```java
+public class TurnOnCommand implements Command{
+    private Light light = null;
+    public TurnOnCommand(Light light){
+        this.light = light;
+    }
+
+    @Override
+    public void excute() {
+        this.light.turnOn();
+    }
+    
+}
+```
+TurnOffCommand.java
+```java
+public class TurnOffCommand implements Command{
+    Light light = null;
+    public TurnOffCommand(Light light){
+        this.light = light;
+    }
+    @Override
+    public void excute() {
+        this.light.turnOff();
+    }
+}
+```
+
+RemoteControl.java
+```java
+public class RemoteControl {
+    ArrayList<Command> listCommand = null;
+    public RemoteControl(){
+        this.listCommand = new ArrayList<Command>();
+    }
+    public void addCommand(Command cmd){
+        this.listCommand.add(cmd);
+    }
+    public void remote(){
+        for (Command cmd : this.listCommand) {
+            cmd.excute();
+        }
+    }
+}
+```
+
+```java
+public class Client {
+
+    public static void main(String[] args) {
+        System.out.println("Command Pattern Demo.");
+        Light light = new Light();
+        RemoteControl control = new RemoteControl();
+        TurnOnCommand onCommand = new TurnOnCommand(light);
+        TurnOffCommand offCommand = new TurnOffCommand(light);
+        control.addCommand(onCommand);
+        control.addCommand(offCommand);
+        control.remote();
+    }
+}
+```
+Kết quả chạy chương trình
+```yml
+Command Pattern Demo.
+Light Turn On.
+Light Turn Off.
+```
 ## 3. Command Pattern (structure):
 ## Tài liệu tham khảo (reference):
