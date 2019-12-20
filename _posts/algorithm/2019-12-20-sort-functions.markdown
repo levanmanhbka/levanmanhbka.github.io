@@ -8,7 +8,7 @@ tags: "algorithm sort"
 Sort Functions là bài đầu tiên trong loạt bài viết về thuật toán cơ bản nhằm ôn lại kiến thức nền tảng.
 
 ## 1. Selection Sort
-Thuật toán có độ phức tạp O(n^2)
+Độ phức tạp trung bình O(n^2)
 ```c
 void SelectionSort(int *A, int n)
 	{
@@ -28,7 +28,7 @@ void SelectionSort(int *A, int n)
 ```
 
 ## 2. Bubble Sort
-Thuật toán có độ phức tạp O(n^2)
+Độ phức tạp trung bình O(n^2)
 ```c
 void BubbleSort(int *A, int n)
 	{
