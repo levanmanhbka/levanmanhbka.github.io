@@ -48,7 +48,7 @@ void BubbleSort(int *A, int n)
 ```
 
 ## 3. Quick Sort
-Thuật toán có độ phức tạp trung bình O(nlog(n)), tuy nhiên trong trường hợp tệ nhất thì độ phức tạp vẫn có thể lên tới O(n^2). Ví dụ như việc sắp xếp mảng theo chiều tăng dần và day số đầu vào hiện tại là mảng giảm giần.
+Quicksort is a divide and conquer algorithm, độ phức tạp trung bình là O(nlog(n)) và là tệ nhất O(n^2).
 ```c
 int Partition(int A[], int lo, int hi)
 	{
