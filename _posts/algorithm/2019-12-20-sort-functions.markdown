@@ -93,3 +93,33 @@ int Partition(int A[], int lo, int hi)
 		}
 	}
 ```
+## 4. Merge Sort
+
+## 5. Heap Sort
+
+## 6. Demo
+```c
+void Run()
+{
+    ifstream readFile;
+    readFile.open("input_data.txt");
+    int n;
+    int A[1000];
+    readFile >> n;
+    for (int i = 0; i < n; i++)
+    {
+        readFile >> A[i];
+        cout << A[i] << "\t";
+    }
+
+    QuickSort(A, n);
+
+    cout << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << A[i] << "\t";
+    }
+    readFile.close();
+}
+
+```
