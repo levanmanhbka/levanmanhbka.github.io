@@ -94,6 +94,48 @@ int Partition(int A[], int lo, int hi)
 	}
 ```
 ## 4. Merge Sort
+Độ phức tạp trung bình O(n)log(n), Usually done recursively, divide and conquer.
+```c
+void Merge(int A[], int first, int middle, int last)
+	{
+		int *tempArr = new int[last - first + 1];
+		int first1 = first;
+		int last1 = middle;
+		int first2 = middle + 1;
+		int last2 = last;
+		int index = 0;
+
+		while ((first1 <= last1) && (first2 <= last2))
+			if (A[first1] <= A[first2])
+				tempArr[index++] = A[first1++];
+			else
+				tempArr[index++] = A[first2++];
+
+		if (first1 > last1)
+			while (first2 <= last2)
+				tempArr[index++] = A[first2++];
+
+		if (first2 > last2)
+			while (first1 <= last1)
+				tempArr[index++] = A[first1++];
+
+		for (int i = 0; i < index; i++)
+			A[first + i] = tempArr[i];
+
+		delete[] tempArr;
+	}
+
+	void MergeSort(int A[], int first, int last)
+	{
+		if (first < last)
+		{
+			int mid = (first + last) / 2;
+			MergeSort(A, first, mid);
+			MergeSort(A, mid + 1, last);
+			Merge(A, first, mid, last);
+		}
+	}
+```
 
 ## 5. Heap Sort
 
