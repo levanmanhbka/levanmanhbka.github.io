@@ -48,7 +48,7 @@ void BubbleSort(int *A, int n)
 ```
 
 ## 3. Quick Sort
-Quicksort is a divide and conquer algorithm, độ phức tạp trung bình là O(nlog(n)) và là tệ nhất O(n^2).
+Độ phức tạp trung bình là O(nlog(n)) và là tệ nhất O(n^2). Quicksort is a divide and conquer algorithm.
 ```c
 int Partition(int A[], int lo, int hi)
 	{
