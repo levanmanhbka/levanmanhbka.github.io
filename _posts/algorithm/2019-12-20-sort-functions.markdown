@@ -138,7 +138,42 @@ void MergeSort(int A[], int first, int last)
 ```
 
 ## 5. Heap Sort
+Độ phức tạp trung bình O(nlog(n)), có ưu điểm hơn hẳn các phương pháp trước do sắp xếp nhanh cùng với không phải dùng mảng phụ như MergeSort. Ví dụ dưới đây sắp xếp mảng tăng dần nên cần phải build max heap (thấy ngược ngược cơ mà chạy mới biết là hợp lý).
+```c
+void MaxHeapify(int A[], int parent, int heapSize)
+{
+	int largest = parent;
+	int left = parent * 2 + 1;
+	int right = parent * 2 + 2;
+	if (left < heapSize && A[left] > A[largest])
+		largest = left;
+	if (right < heapSize && A[right] > A[largest])
+		largest = right;
+	if (largest != parent)
+	{
+		swap(A[parent], A[largest]);
+		MaxHeapify(A, largest, heapSize);
+	}
+}
 
+void BuildHeap(int A[], int n)
+{
+	for (int i = (n - 1) / 2; i >= 0; i--)
+		MaxHeapify(A, i, n);
+}
+
+void HeapSort(int A[], int n)
+{
+	int heapSize = n;
+	BuildHeap(A, n);
+	for (int i = n - 1; i > 0; i--)
+	{
+		swap(A[0], A[i]);
+		heapSize--;
+		MaxHeapify(A, 0, heapSize);
+	}
+}
+```
 ## 6. Demo
 ```c
 void Run()
@@ -154,7 +189,7 @@ void Run()
         cout << A[i] << "\t";
     }
 
-    QuickSort(A, n);
+    HeapSort(A, n);
 
     cout << endl;
     for (int i = 0; i < n; i++)
