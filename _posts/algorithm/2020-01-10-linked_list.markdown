@@ -32,3 +32,49 @@ public:
     }
 };
 ```
+
+### 2. Find middle of the linked list
+```c++
+/*
+ * Date: 2019/01/01
+ */
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* oneStep = head;
+        ListNode* twoStep = head->next;
+        while(twoStep != NULL)
+        {
+            twoStep = twoStep->next;
+            if(twoStep == NULL)
+            {
+                return oneStep->next;
+            }
+            else
+            {
+                twoStep = twoStep->next;
+                oneStep = oneStep->next;
+            }
+        }
+        return oneStep;
+    }
+};
+```
+
+### 3. Delete node in linked list
+```c++
+/*
+ * Date: 2019/01/01
+ * Bài này mình thấy họ chỉ đưa ra cho mình node
+ * không đưa ra giá trị của node cần xóa làm mình ban đầu loay hoay
+ */
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        ListNode* dNode = node->next;
+        node->val = node->next->val;
+        node->next = node->next->next;
+        delete dNode;
+    }
+};
+```

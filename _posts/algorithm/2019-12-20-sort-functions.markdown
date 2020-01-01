@@ -5,7 +5,7 @@ date:   2019-12-20 21:03:36 +0530
 tags: "algorithm sort"
 ---
 
-Sort Functions là bài đầu tiên trong loạt bài viết về thuật toán cơ bản nhằm ôn lại kiến thức nền tảng.
+Sort Functions là bài số 1 trong loạt bài viết về thuật toán cơ bản nhằm ôn lại kiến thức nền tảng.
 
 ## 1. Selection Sort
 Độ phức tạp trung bình O(n^2)
