@@ -18,19 +18,17 @@ Linked list là bài số 2 trong loạt bài ôn lại thuật toán của mìn
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
-public:
-    int getDecimalValue(ListNode* head) {
-        int value = 0;
-        ListNode* node = head;
-        while(node)
-        {
-            value = (value <<1) + node->val;
-            node = node->next;
-        }
-        return value;
+
+int getDecimalValue(ListNode* head) {
+    int value = 0;
+    ListNode* node = head;
+    while(node)
+    {
+        value = (value <<1) + node->val;
+        node = node->next;
     }
-};
+    return value;
+}
 ```
 
 ### 2. Find middle of the linked list
@@ -38,27 +36,24 @@ public:
 /*
  * Date: 2019/01/01
  */
-class Solution {
-public:
-    ListNode* middleNode(ListNode* head) {
-        ListNode* oneStep = head;
-        ListNode* twoStep = head->next;
-        while(twoStep != NULL)
+ListNode* middleNode(ListNode* head) {
+    ListNode* oneStep = head;
+    ListNode* twoStep = head->next;
+    while(twoStep != NULL)
+    {
+        twoStep = twoStep->next;
+        if(twoStep == NULL)
+        {
+            return oneStep->next;
+        }
+        else
         {
             twoStep = twoStep->next;
-            if(twoStep == NULL)
-            {
-                return oneStep->next;
-            }
-            else
-            {
-                twoStep = twoStep->next;
-                oneStep = oneStep->next;
-            }
+            oneStep = oneStep->next;
         }
-        return oneStep;
     }
-};
+    return oneStep;
+}
 ```
 
 ### 3. Delete node in linked list
@@ -68,13 +63,43 @@ public:
  * Bài này mình thấy họ chỉ đưa ra cho mình node
  * không đưa ra giá trị của node cần xóa làm mình ban đầu loay hoay
  */
-class Solution {
-public:
-    void deleteNode(ListNode* node) {
-        ListNode* dNode = node->next;
-        node->val = node->next->val;
-        node->next = node->next->next;
-        delete dNode;
+void deleteNode(ListNode* node) {
+    ListNode* dNode = node->next;
+    node->val = node->next->val;
+    node->next = node->next->next;
+    delete dNode;
+}
+```
+
+### 4. Determine if linked list is palindrome
+```c++
+/*
+ * Date: 2019/01/02
+ * [1, 0, 1] -> true
+ * [1, 1] -> true
+ * [1, 2, 3, 3, 2, 1] -> true
+ */
+bool isPalindrome(ListNode* head) {
+    if(head == NULL)
+        return true;
+    ListNode* point = head;
+    stack<int> mstack;
+    
+    while(point != NULL)
+    {
+        mstack.push(point->val);
+        point = point->next;
     }
-};
+    
+    point = head;
+    while(point != NULL)
+    {
+        if(point->val != mstack.top())
+            return false;
+        mstack.pop();
+        point = point->next;
+    }
+    
+    return mstack.empty();
+}
 ```
