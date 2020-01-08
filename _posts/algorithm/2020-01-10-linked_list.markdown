@@ -105,9 +105,9 @@ bool isPalindrome(ListNode* head) {
 ```
 
 ### 5. Remove zero sum consecutive nodes from linked list
-Đây là một bài khá hay và mình đã tham khảo một lời giải sau đó code lại. Ý tưởng chính của nó là thằng pre luôn là node sau cùng và chắc chắn không bị xóa. Vậy thời điểm ban đầu pre trỏ vào đâu ?
-Ở thời điểm ban đầu mọi con trỏ đều bị xóa nên chỉ còn cách tạo một node dummy và cho node này chỏ vào đầu mảng, đây chính là vị trí xuất phát của con trỏ pre
-![link-list-remove-consecutive-elements.png!](assets/images/algorithm/link-list-remove-consecutive-elements.png)
+Đây là một bài khá hay và mình đã tham khảo một lời giải sau đó code lại. Ý tưởng chính có một con trỏ pre luôn trỏ tới node sau cùng và chắc chắn không bị xóa. Vậy thời điểm ban đầu pre trỏ vào đâu ?
+Ở thời điểm ban đầu mọi node đều có thể bị xóa nên chỉ còn cách tạo một node dummy và cho node này trỏ vào đầu linked list, đây chính là vị trí xuất phát của con trỏ pre
+![link-list-remove-consecutive-elements.png!](/assets/images/algorithm/link-list-remove-consecutive-elements.png)
 ```c++
 /*
  * Date: 2020/01/09
@@ -115,16 +115,15 @@ bool isPalindrome(ListNode* head) {
  ListNode* removeZeroSumSublists(ListNode* head) {
         
     ListNode dummy = ListNode(0);
+    dummy.next = head;
     ListNode* pre = &dummy;
     ListNode* p = head;
-    pre->next = head;
 
     while (p)
     {
         int sum = p->val;
         if (sum == 0)
         {
-            // remove q;
             pre->next = p->next;
             p = p->next;
             continue;
