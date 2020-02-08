@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Machine learning 01 - Concept"
-date:   2019-09-21 21:03:36 +0530
+date:   2020-02-07 21:03:36 +0530
 tags: "design pattern commad software architecture java"
 ---
 
