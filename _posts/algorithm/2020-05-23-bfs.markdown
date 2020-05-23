@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Algorithm - BFS"
-date:   2020-05-023 21:03:36 +0530
+date:   2020-05-23 21:03:36 +0530
 tags: "bfs graph breadth first search"
 ---
 
