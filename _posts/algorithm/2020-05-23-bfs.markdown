@@ -11,7 +11,7 @@ BFS - Breadth First Search thuật toán duyệt đồ thị theo chiều rộng
 Để vừa hiểu cách emplement và hiểu ứng dụng của nó, mình sẽ đi vào giải một bài toán trên spoj.com. [https://www.spoj.com/problems/ELEVTRBL](https://www.spoj.com/problems/ELEVTRBL/)
 
 ### Solved:
-```c
+```c++
 const int MAX = 2000000;
 
 int F, S, G, u, d;
