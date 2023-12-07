@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Algorithm - BFS"
+date:   2020-05-23 21:03:36 +0530
+tags: "bfs graph breadth first search"
+---
+
+BFS - Breadth First Search thuật toán duyệt đồ thị theo chiều rộng, ý tưởng chung của thuật toán này là khi duyệt một trạng thái, các trạng thái kề với nó sẽ được cho vào hàng đợi để chờ duyệt. Thuật toán cứ tiếp tục như vậy cho tới khi các trạng thái có thể duyệt được duyệt hết.
+
+### Problem:
+Để vừa hiểu cách emplement và hiểu ứng dụng của nó, mình sẽ đi vào giải một bài toán trên spoj.com. [https://www.spoj.com/problems/ELEVTRBL](https://www.spoj.com/problems/ELEVTRBL/)
+
+### Solved:
+```c++
+const int MAX = 2000000;
+
+int F, S, G, u, d;
+int state[2000000]; //save distance, tell traved or not
+
+int queue[MAX];
+int front, rear;
+
+void BFS(int position){
+    front = rear = 0;
+    state[position] = 0;
+    queue[rear] = position;
+    rear = (rear + 1) % MAX;
+
+    while (front != rear){
+        position = queue[front];
+        front = (front + 1) % MAX;
+        int i;
+        // go up
+        i = position + u;
+        if (i <= F && state[i] == -1){
+            state[i] = state[position] + 1;
+            queue[rear] = i;
+            rear = (rear + 1);
+        }
+
+        // go down
+        i = position - d;
+        if (i >= 1 && state[i] == -1){
+            state[i] = state[position] + 1;
+            queue[rear] = i;
+            rear = (rear + 1);
+        }
+    }
+}
+
+int Run()
+{
+    int T, test_case;
+    freopen("bfs_input.txt", "r", stdin);
+
+    cin >> F >> S >> G >> u >> d;
+    for (int i = 1; i <= F; i++){
+        state[i] = -1;
+    }
+
+    BFS(S);
+
+    if (state[G] == -1){
+        cout << "use the stairs";
+    }
+    else{
+        cout << state[G];
+    }
+
+    return 0;//Your program should return 0 on normal termination.
+}
+```
