@@ -1,6 +1,6 @@
 ---
 title: Kubernetes
-date: 2023-12-16 22:34:00 +0700
+date: 2023-12-7 22:34:00 +0700
 categories: [MLOPs, Kubernetes, Docker]
 tags: [mlops]     # TAG names should always be lowercase
 ---
