@@ -2,7 +2,7 @@
 title: Kubernetes
 date: 2023-12-15 22:34:00 +0700
 categories: [MLOPs, Kubernetes, Docker]
-tags: [mlops]     # TAG names should always be lowercase
+tags: [mlops, kubernetes]     # TAG names should always be lowercase
 ---
 
 ## How to access local Kubernetes minikube dashboard remotely
