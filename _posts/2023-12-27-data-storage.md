@@ -23,7 +23,7 @@ Use case | | Chạy ứng dụng | Thường xuyên thay đổi nội dung Seque
 _https://bizflycloud.vn/tin-tuc/object-storage-luu-tru-doi-tuong-la-gi-khac-gi-voi-luu-tru-truyen-thong-20180702092808245.htm_
 
 # 2. File Storage Framework Landscape
-Dưới dây là danh sách một số storage frame work opensource:
+Dưới dây là danh sách một số storage frame work open source:
 - MinIO: high-performance, S3 compatible object store. It is built for large scale AI/ML, data lake and database workloads.(_min.io_)
 - Ceph: distributed object, block, and file storage platform.(_ceph.io_)
 - JuiceFS: distributed POSIX file system built on top of Redis and S3.(_juicefs.com_)
