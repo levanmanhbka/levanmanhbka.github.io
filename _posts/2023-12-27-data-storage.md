@@ -1,6 +1,6 @@
 ---
-title: Kubernetes
-date: 2023-12-26 00:00:00 +0700
+title: Minio
+date: 2023-12-26 01:01:01 +0700
 categories: [MLOPs, Data Storage, Minio]
 tags: [kotlin]     # TAG names should always be lowercase
 ---
