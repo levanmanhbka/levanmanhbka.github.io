@@ -14,12 +14,13 @@ So sánh | File storage | Block storage | Object storage |
 | :-----: | :-----: | :------: | :------: |
 | Kiến trúc lưu trữ | Lưu trữ file | Lưu trữ block | Lưu trữ hướng đối tượng |
 |Đơn vị chuyển đổi  | files | blocks |Các object, hay các metadata tùy chỉnh|
-Hỗ trợ cập nhật | Hỗ trợ cập nhật tại chỗ | Hỗ trợ cập nhật tại chỗ | Không hỗ trợ cập nhật tại chỗ, cập nhật tạo ra các phiên bản object mới
-Giao thức| CIFS và NFS | SCSI, SATA | REST và SOAP qua http
-Phù hợp nhất cho | Chia sẻ file | Dữ liệu giao dịch và dữ liệu thay đổi thường xuyên | Dữ liệu tập trung và như 1 cloud storage
-Lợi thể nổi bật | Đơn giản hóa truy cập và quản lý chia sẻ file | Hiệu năng cao | Khả năng mở rộng và truy cập phân tán
-Tôc độ xử lý | Trở nên nặng nề khi số lượng file lến tới hàng tỷ | Phân mảnh dữ liệu, không thể truy xuất 1 file nhanh chóng | Truy xuất đến thẳng vị trí lưu trữ, tốc độ nhanh
-Use case | | Chạy ứng dụng | Thường xuyên thay đổi nội dung Sequential R/W |It thay đổi nội dung hơn,  Random R/W, ISO, Kho chứa hình ảnh/Video
+|Hỗ trợ cập nhật | Hỗ trợ cập nhật tại chỗ | Hỗ trợ cập nhật tại chỗ | Không hỗ trợ cập nhật tại chỗ, cập nhật tạo ra các phiên bản object mới|
+|Giao thức| CIFS và NFS | SCSI, SATA | REST và SOAP qua http|
+|Phù hợp nhất cho | Chia sẻ file | Dữ liệu giao dịch và dữ liệu thay đổi thường xuyên | Dữ liệu tập trung và như 1 cloud storage|
+|Lợi thể nổi bật | Đơn giản hóa truy cập và quản lý chia sẻ file | Hiệu năng cao | Khả năng mở rộng và truy cập phân tán|
+|Tôc độ xử lý | Trở nên nặng nề khi số lượng file lến tới hàng tỷ | Phân mảnh dữ liệu, không thể truy xuất 1 file nhanh chóng | Truy xuất đến thẳng vị trí lưu trữ, tốc độ nhanh|
+|Use case | Chạy ứng dụng | Thường xuyên thay đổi nội dung Sequential R/W |It thay đổi nội dung hơn,  Random R/W, ISO, Kho chứa hình ảnh/Video|
+
 _https://bizflycloud.vn/tin-tuc/object-storage-luu-tru-doi-tuong-la-gi-khac-gi-voi-luu-tru-truyen-thong-20180702092808245.htm_
 
 # 2. File Storage Framework Landscape
