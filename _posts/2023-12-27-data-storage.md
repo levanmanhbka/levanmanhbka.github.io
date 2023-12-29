@@ -10,7 +10,7 @@ tags: [kotlin]     # TAG names should always be lowercase
 _https://canonical.com/blog/what-are-the-different-types-of-storage-block-object-and-file_
 
 # 2. So sánh file storage, block storage và object storage
-So sánh | File storage | Block storage | Object storage |
+|So sánh | File storage | Block storage | Object storage |
 | :-----: | :-----: | :------: | :------: |
 | Kiến trúc lưu trữ | Lưu trữ file | Lưu trữ block | Lưu trữ hướng đối tượng |
 |Đơn vị chuyển đổi  | files | blocks |Các object, hay các metadata tùy chỉnh|
