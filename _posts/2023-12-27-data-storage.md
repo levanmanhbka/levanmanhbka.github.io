@@ -11,13 +11,6 @@ _https://canonical.com/blog/what-are-the-different-types-of-storage-block-object
 
 # 2. So sánh file storage, block storage và object storage
 
-| Build In Operator | Responsibility |
-| :-----: | :-----: |
-| BashOperator | executes a bash command   |
-| BashOperator | executes a bash command|
-| PythonOperator| calls an arbitrary Python function|
-| EmailOperator | sends an email|
-
 |So sánh | File storage | Block storage | Object storage |
 | :-----: | :-----: | :------: | :------: |
 | Kiến trúc lưu trữ | Lưu trữ file | Lưu trữ block | Lưu trữ hướng đối tượng |
