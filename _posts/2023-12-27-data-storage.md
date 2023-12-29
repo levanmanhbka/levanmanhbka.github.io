@@ -12,7 +12,7 @@ _https://canonical.com/blog/what-are-the-different-types-of-storage-block-object
 # 2. So sánh file storage, block storage và object storage
 
 |So sánh | File storage | Block storage | Object storage |
-| :-----: | :-----: | :------: | :------: |
+| ----- | ----- | ------ | ------ |
 | Kiến trúc lưu trữ | Lưu trữ file | Lưu trữ block | Lưu trữ hướng đối tượng |
 |Đơn vị chuyển đổi  | files | blocks |Các object, hay các metadata tùy chỉnh|
 |Hỗ trợ cập nhật | Hỗ trợ cập nhật tại chỗ | Hỗ trợ cập nhật tại chỗ | Không hỗ trợ cập nhật tại chỗ, cập nhật tạo ra các phiên bản object mới|
