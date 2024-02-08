@@ -1,8 +1,8 @@
 ---
 title: C# Event and Delegate
 date: 2023-02-07 01:01:01 +0700
-categories: [C#, Event, Delegate]
-tags: [c#]     # TAG names should always be lowercase
+categories: [C# Advanced]
+tags: [c#, event, delegate]     # TAG names should always be lowercase
 ---
 
 # 1. Introduction
