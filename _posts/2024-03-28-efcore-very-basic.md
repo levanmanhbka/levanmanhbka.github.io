@@ -9,7 +9,7 @@ tags: [efcore]     # TAG names should always be lowercase
 1. Install EF Core
 2. Install EF Core Sqlite
 
-``` C#
+``` c#
 // Define Entity
 [Table("users")]
 public class User
