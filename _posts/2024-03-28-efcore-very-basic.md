@@ -1,6 +1,6 @@
 ---
 title: EF Core Very Basic
-date: 2023-03-28 01:01:01 +0700
+date: 2024-03-28 01:01:01 +0700
 categories: [EF Core]
 tags: [efcore]     # TAG names should always be lowercase
 ---
