@@ -1,5 +1,5 @@
 ---
-title: SQLAlchemy Basic
+title: SQLAlchemy 01 - Work With Database
 date: 2024-10-15 01:01:01 +0700
 categories: [sql alchemy]
 tags: [sql orm alchemy]     # TAG names should always be lowercase
